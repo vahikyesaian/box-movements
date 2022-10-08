@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        main{
+            width: 100%;
+            height: 100vh;
+            background-color: grey;
+            overflow-y: scroll;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        #menu{
+            width: 100%;
+            height: 120px;
+            transition: 2s;
+
+        }
+        #menu>ul{
+            background-color: yellowgreen;
+            height: 100%;
+            display: flex;
+            overflow: hidden;
+
+        }
+        #menu>ul>li{
+            width: 100%;
+            height: 100%;
+            list-style-type: none;
+            font-size: 25px;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: capitalize;
+            cursor: pointer;
+            transition: .4s;
+            position: relative;
+        }
+        #menu>ul>li::after{
+            content: '';
+            display: block;
+            width: 1px;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.778);
+            position: absolute;
+            right: 0;
+            
+        }
+        #menu>ul>li:nth-of-type(7)::after{
+            background-color: transparent;
+        }
+        #menu>ul>li:hover{
+            text-shadow: -5px 2px 5px ;
+            transform: scale(1.1);
+            border: none;
+        }
+        .box{
+            width: 100%;
+            /* border: 10px solid black; */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .box>section{
+            width: 50%;
+            background-color: gainsboro;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            border-radius: 10px;
+        }
+        .box>section>p{
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            font-size: 18px;
+            text-transform: capitalize;
+            padding: 10px;
+        }
+        main>section{
+            border: 1px solid black;
+            border-radius: 50%;
+            position: fixed;
+        }
+        .circle1{
+            width: 5px;
+            height: 5px;  
+            transition: .6s ease;         
+        }
+        .circle2{
+            width: 35px;
+            height: 35px;
+            transform: translate(-50%, -50%);
+            transition: .4s linear;
+        }
+        /* .more{
+            width: 80% !important;
+            height: 80px !important;
+            background-color: forestgreen !important;
+            position: fixed;
+            top: 0;
+           
+        } */
+        .box:nth-of-type(2)>section:nth-of-type(1){
+            transform: translatex(170%);
+            transition: 1s;
+        }
+        .box:nth-of-type(2)>section:nth-of-type(2){
+            opacity: 0;
+            transition: 1.5s;
+        }
+        .box:nth-of-type(2)>section:nth-of-type(3){
+            transform: translatex(-170%);
+            transition: 1.7s;
+        }
+        .box:nth-of-type(3)>section{
+           height: 0;
+           opacity: 0;
+           transition: 1s;
+        }
+        .box:nth-of-type(4)>section{
+            transform: scale(0)rotate(240deg);
+            transition: 1s;
+        }
+  
+    </style>
+</head>
+<body>
+    <main>
+        <header id="menu">
+            <ul>
+                <li>home</li>
+                <li>profile</li>
+                <li>portfolio</li>
+                <li>resume</li>
+                <li>testimony</li>
+                <li>services</li>
+                <li>contact</li>
+            </ul>
+            <div class="box" style="height: 1200px;">
+                <section>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At sapiente mollitia, quae quod deserunt praesentium corrupti accusantium dicta repellat ad labore aliquid dolorem fugiat atque placeat commodi non ut maxime distinctio. Officiis, eum libero laboriosam porro natus maxime, sit consequuntur molestias, sint exercitationem explicabo repudiandae. Quidem eum quasi distinctio inventore? Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, sunt temporibus. Corporis recusandae veniam inventore culpa veritatis quia? Placeat alias ipsa illum laboriosam! Vitae ipsam quidem recusandae porro perferendis saepe.</p>
+                </section>
+                <section>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At sapiente mollitia, quae quod deserunt praesentium corrupti accusantium dicta repellat ad labore aliquid dolorem fugiat atque placeat commodi non ut maxime distinctio. Officiis, eum libero laboriosam porro natus maxime, sit consequuntur molestias, sint exercitationem explicabo repudiandae. Quidem eum quasi distinctio inventore?</p>
+                </section>
+                <section>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At sapiente mollitia, quae quod deserunt praesentium corrupti accusantium dicta repellat ad labore aliquid dolorem fugiat atque placeat commodi non ut maxime distinctio. Officiis, eum libero laboriosam porro natus maxime, sit consequuntur molestias, sint exercitationem explicabo repudiandae. Quidem eum quasi distinctio inventore?Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus recusandae fugiat provident pariatur deleniti vero porro praesentium laudantium, cumque id, sed culpa eaque eveniet sequi. Voluptatum eius excepturi iste voluptatem?</p>
+                </section>
+            </div>
+            <div class="box" style="height: 1500px;">
+                <section>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At sapiente mollitia, quae quod deserunt praesentium corrupti accusantium dicta repellat ad labore aliquid dolorem fugiat atque placeat commodi non ut maxime distinctio. Officiis, eum libero laboriosam porro natus maxime, sit consequuntur molestias, sint exercitationem explicabo repudiandae. Quidem eum quasi distinctio inventore?</p>
+                </section>
+                <section>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At sapiente mollitia, quae quod deserunt praesentium corrupti accusantium dicta repellat ad labore aliquid dolorem fugiat atque placeat commodi non ut maxime distinctio. Officiis, eum libero laboriosam porro natus maxime, sit consequuntur molestias, sint exercitationem explicabo repudiandae. Quidem eum quasi distinctio inventore? Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis culpa itaque illum sed laboriosam sint eveniet autem mollitia neque recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda doloribus facere, ad eaque odit placeat in ipsa. Iure exercitationem provident culpa, fugit, earum unde dolores laudantium cupiditate, quisquam nostrum neque?</p>
+                </section>
+                <section>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At sapiente mollitia, quae quod deserunt praesentium corrupti accusantium dicta repellat ad labore aliquid dolorem fugiat atque placeat commodi non ut maxime distinctio. Officiis, eum libero laboriosam porro natus maxime, sit consequuntur molestias, sint exercitationem explicabo repudiandae. Quidem eum quasi distinctio inventore?</p>
+                </section>
+            </div>
+            <div class="box" style="height: 800px;">
+                <section>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At sapiente mollitia, quae quod deserunt praesentium corrupti accusantium dicta repellat ad labore aliquid dolorem fugiat atque placeat commodi non ut maxime distinctio. Officiis, eum libero laboriosam porro natus maxime, sit consequuntur molestias, sint exercitationem explicabo repudiandae. Quidem eum quasi distinctio inventore?</p>
+                </section>
+                <section>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At sapiente mollitia, quae quod deserunt praesentium corrupti accusantium dicta repellat ad labore aliquid dolorem fugiat atque placeat commodi non ut maxime distinctio. Officiis, eum libero laboriosam porro natus maxime, sit consequuntur molestias, sint exercitationem explicabo repudiandae. Quidem eum quasi distinctio inventore?</p>
+                </section>
+            </div>
+            <div class="box" style="height: 1100px; ;">
+                <section>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At sapiente mollitia, quae quod deserunt praesentium corrupti accusantium dicta repellat ad labore aliquid dolorem fugiat atque placeat commodi non ut maxime distinctio. Officiis, eum libero laboriosam porro natus maxime, sit consequuntur molestias, sint exercitationem explicabo repudiandae. Quidem eum quasi distinctio inventore?</p>
+                </section>
+            </div>
+
+        </header>
+        <section class="circle1"></section>
+        <section class="circle2"></section>
+    </main>
+</body>
+<script>
+    let _main =document.getElementsByTagName('main')[0]
+    let _circle = document.querySelectorAll('main>section')
+    _main.addEventListener('mousemove',(e)=>{
+        x= e.clientX
+        y= e.clientY
+        _circle[0].style.top=(y+27)+'px'
+        _circle[0].style.left=(x+27)+'px'
+        _circle[1].style.top=(y+30)+'px'
+        _circle[1].style.left=(x+30)+'px'
+
+    })
+    // let _main= document.getElementsByTagName('main')[0]
+
+    // _main.addEventListener('scroll',function(){
+    //     _st = this.scrollTop
+    //     if(_st>90){
+    //         document.getElementById('menu').classList.add('more')
+    //     }else{
+    //         document.getElementById('menu').classList.remove('more')
+    //     }
+    // })
+        let _box =document.querySelectorAll('.box')
+        let see=[]
+        for(i=1;i<_box.length;i++){
+           see.push( _box[i].offsetTop)
+        }
+        console.log(see)
+
+
+
+
+
+        _main.addEventListener('scroll',function(){
+            _st= document.getElementsByTagName('main')[0].scrollTop
+            if(_st>=see[0]){
+                document.querySelector('.box:nth-of-type(2)>section:nth-of-type(1)').style.transform='translateX(0)'
+                document.querySelector('.box:nth-of-type(2)>section:nth-of-type(2)').style.opacity='1'
+                document.querySelector('.box:nth-of-type(2)>section:nth-of-type(3)').style.transform='translateX(0)'
+
+            }
+            if(_st>=see[1]){
+                document.querySelector('.box:nth-of-type(3)>section:nth-of-type(1)').style.height='200px'
+                document.querySelector('.box:nth-of-type(3)>section:nth-of-type(1)').style.opacity='1'
+                document.querySelector('.box:nth-of-type(3)>section:nth-of-type(2)').style.height='200px'
+                document.querySelector('.box:nth-of-type(3)>section:nth-of-type(2)').style.opacity='1'
+               
+
+            }
+            if(_st>=see[2]){
+                document.querySelector('.box:nth-of-type(4)>section').style.transform='scale(1)rotate(0)'
+            }
+        })
+
+</script>
+</html>
